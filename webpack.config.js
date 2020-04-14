@@ -9,15 +9,15 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',  
-  devServer: {                 
-    contentBase: './dist'      
+  devtool: 'eval-source-map',
+  devServer: {
+    contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin({ sourceMap: true }), 
-    new CleanWebpackPlugin(),  
+    new UglifyJsPlugin({ sourceMap: true }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Ping Pong',
+      title: 'Triangle Tracker',
       template: './src/index.html',
       inject: 'body'
     })
