@@ -1,8 +1,9 @@
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
 import { Triangle } from './triangle-tracker.js';
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
+
 
 
 $(document).ready(function () {
@@ -14,11 +15,11 @@ $(document).ready(function () {
     var triangle = new Triangle(number1, number2, number3);
     triangle.checkType();
     if (triangle.result === "not a triangle") {
-      $("#notatriangle").show
+      $("#notatriangle").show();
     } else if (triangle.result === "scalene triangle") {
-      $("#scalene").show
-    } else if (triangle.result === "isoceles triangle") {
-      $("#isoceles").show
+      $("#scalene").show();
+    } else if (triangle.result === "isosceles triangle") {
+      $("#isosceles").show();
     }
     console.log(triangle.result)
     // if (number1 == number3 && number2 === number3) {

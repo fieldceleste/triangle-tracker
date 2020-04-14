@@ -17,12 +17,14 @@ export function Triangle(side1, side2, side3) {
   this.side2 = side2;
   this.side3 = side3;
   this.result = "";
-  debugger;
+  // debugger;
 }
 
 Triangle.prototype.checkType = function () {
   if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
     this.result = "not a triangle";
+  } else if ((this.side1 === this.side2) && (this.side2 === this.side3)) {
+    this.result = "is an equilateral triangle";
   } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
     this.result = "scalene triangle";
   } else if ((this.side1 === this.side2) || ((this.side1 === this.side3)) || ((this.side2 === this.side3))) {
